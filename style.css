@@ -1,0 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1440px;
+    min-height: 100hv;
+    margin: 0 auto;
+    text-align: center;
+    background-color: brown;
+}
