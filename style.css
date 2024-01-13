@@ -6,8 +6,119 @@ body {
     flex-direction: column;
     justify-content: space-between;
     max-width: 1440px;
-    min-height: 100hv;
+    min-height: 100vh;
     margin: 0 auto;
     text-align: center;
-    background-color: brown;
+    background-color: linen;
+    padding: auto 20px;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    max-width: 1440px;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(224, 190, 197);
+}
+.header__text {
+  
+
+
+
+
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main__left {
+    display: flex;
+}
+.main__left-partman {
+   display: flex; 
+   flex-direction: column;
+   position: absolute;
+   margin: 145px 0px 0px 240px;
+}
+.img2 {
+    margin: -135px 60px 0px 0px;
+}
+.img3 {
+    margin: -84px -63px 0px 0px;
+}
+.img4 {
+    margin: 37px 60px 0px 0px;
+}
+.img5 {
+    margin: -85px -66px 0px 0px;
+} 
+.main__left-partman svg {
+    fell: rgb(224, 190, 197);
+}
+.main__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.word__none {
+    display: flex;
+}
+.word__none-letters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px;
+}
+.letter {
+    display: inline;
+ border-bottom: solid 5px blue;
+ width: 40px;
+}
+.question__text,
+.score__text {
+    font-size: 30px;
+}
+.keybord {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.keybord-letter {
+    background-color: rgb(217, 221, 80);
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: rgb(224, 190, 197);
+    align-items: center;
+}
+.footer__year,
+.footer__rs {
+    font-size: 42px;
+}
+.footer__github img {
+    width: 64px;
+    height: 64px;
+}
+.nam {
+    font-size: 36px;
+    margin: 0px;
 }
