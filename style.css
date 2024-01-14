@@ -74,6 +74,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .word__none {
     display: flex;
@@ -102,14 +103,21 @@ body {
 }
 .keybord {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     gap: 5px;
+    flex-wrap: wrap;
+    max-width: 390px;
 }
-.keybord-letter {
+.keybord button {
     background-color: rgb(217, 221, 80);
     font-size: 25px;
     width: 38px;
     height: 38px;
+    cursor: pointer;
+}
+.keybord button:hover {
+    background-color: rgba(217, 221, 80, 0.5);
 }
 
 
