@@ -26,11 +26,12 @@ body {
     background-color: rgb(224, 190, 197);
 }
 .header__text {
-  
-
-
-
-
+  margin: 5px;
+  animation: header__text 2s infinite;
+}
+@keyframes header__text {
+    from { color:black}
+    to {color: brown;}
 }
 .main {
     display: flex;
@@ -40,20 +41,28 @@ body {
 .main__left {
     display: flex;
 }
+.img-gallows {
+    max-height: 350px;
+}
 .main__left-partman {
    display: flex; 
    flex-direction: column;
    position: absolute;
-   margin: 145px 0px 0px 240px;
+   margin: 30px 0px 0px 115px;
+   transform: scale(0.6);
+}
+.img1 {
+    margin: -5px 0px 0px 0px;
+   
 }
 .img2 {
-    margin: -135px 60px 0px 0px;
+    margin: -130px 60px 0px 0px;
 }
 .img3 {
     margin: -84px -63px 0px 0px;
 }
 .img4 {
-    margin: 37px 60px 0px 0px;
+    margin: 37px 65px 0px 0px;
 }
 .img5 {
     margin: -85px -66px 0px 0px;
@@ -80,21 +89,27 @@ body {
     display: inline;
  border-bottom: solid 5px blue;
  width: 40px;
+ margin: 30px 0px 10px 0px;
+ 
 }
-.question__text,
+.question__text {
+    font-size: 30px;
+    margin: 20px 0px 10px 0px;
+}
 .score__text {
     font-size: 30px;
+    margin: 0px 0px 10px 0px;
 }
 .keybord {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 .keybord-letter {
     background-color: rgb(217, 221, 80);
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
 }
 
 
@@ -112,13 +127,11 @@ body {
 }
 .footer__year,
 .footer__rs {
-    font-size: 42px;
+    font-size: 22px;
 }
 .footer__github img {
-    width: 64px;
-    height: 64px;
-}
-.nam {
-    font-size: 36px;
+    width: 44px;
+    height: 44px;
     margin: 0px;
 }
+
