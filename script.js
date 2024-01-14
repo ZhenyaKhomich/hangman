@@ -48,6 +48,7 @@ let currentAnswer;
 let startScore = 0;
 const maxScore = 6;
 const keybordBlock = document.querySelector(".keybord");
+const personParts = document.querySelector(".main__left-partman");
 const wordNone = document.querySelector(".word__none-letters");
 const scoreNum = document.querySelector(".score-num");
 const letterClick = (button, letterClicked) => {
@@ -60,6 +61,8 @@ const letterClick = (button, letterClicked) => {
         });
     } else {
         startScore++;
+    
+        personParts.querySelectorAll("div")[startScore-1].classList.add("yes");
     }
     scoreNum.innerText = `${startScore} / ${maxScore}`;
 }
