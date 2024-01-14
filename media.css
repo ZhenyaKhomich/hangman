@@ -1,3 +1,24 @@
+@media (max-width: 1200px) {
+    .lost,
+    .win {
+        left: 38%;
+        top: 38px;
+    }
+}
+@media (max-width: 1000px) {
+    .lost,
+    .win {
+        left: 35%;
+        top: 38px;
+    }
+}
+@media (max-width: 800px) {
+    .lost,
+    .win {
+        left: 32%;
+        top: 38px;
+    }
+}
 @media (max-width: 768px) {
     .page {
         max-width: 768px;
@@ -75,6 +96,11 @@
         width: 40px;
         height: 40px;
         margin: 0px;
+    }
+    .lost,
+    .win {
+        left: 30%;
+        top: 38px;
     }
 }
 
@@ -155,6 +181,11 @@
         height: 35px;
         margin: 0px;
     }
+    .lost,
+    .win {
+        left: 24%;
+        top: 30px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -162,7 +193,7 @@
         max-width: 500px;
     } 
     .img-gallows {
-        max-height: 190px;
+        max-height: 130px;
         padding: 0px 0px 20px 0px;
     }
     .main {
@@ -172,60 +203,66 @@
     }
     .main__left-partman {
        margin: -67px 0px 0px 12px;
-       transform: scale(0.25);
+       transform: scale(0.15);
     }
     .img1 img {
-        margin: -10px 0px 0px -220px;
+        margin: 0px 0px 0px -300px;
         width: 120px;
     }
     .img2 {
-        margin: -10px 0px 0px -220px;
+        margin: 0px 0px -40px -300px;
     }
     .img3 {
-        margin: -130px 60px 0px -220px;
+        margin: -140px 60px 0px -300px;
     }
     .img4 {
-        margin: -85px -63px 0px -220px;
+        margin: -85px -63px 0px -300px;
     }
     .img5 {
-       margin: 17px 60px 0px -220px;
+       margin: 30px 0px -90px -360px;
     }
     .img6 {
-       margin: -85px -66px 0px -220px;
+       margin: -85px -66px -200px -300px;
     } 
     .word__none {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: -30px 0px 0px 0px;
     }
     .word__none-letters {
         gap: 7px;
-        margin: 0px 0px -20px 0px;
+        margin: -10px 0px -20px 0px;
     }
     .letter {
      border-bottom: solid 3px blue;
-     width: 25px;
+     width: 20px;
      margin: 30px 0px 10px 0px;
     }
     .letter.word__none-letter {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 800;
     }
     .question__text {
-        font-size: 18px;
+        font-size: 15px;
         margin: 20px 0px 10px 0px;
     }
     .score__text {
-        font-size: 18px;
+        font-size: 15px;
         margin: 0px 0px 10px 0px;
     }
     .keybord {
-        max-width: 290px;
+        max-width: 240px;
     }
     .keybord button {
-        font-size: 18px;
-        width: 25px;
-        height: 25px;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+    }
+    .win,
+    .lost {
+        left: 20%;
+        top: 25px;
     }
     .footer__year,
     .footer__rs {

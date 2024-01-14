@@ -45,8 +45,16 @@ const listQuestions = [
     }
 ];
 let currentAnswer;
+let rightLetters =[];
 let startScore = 0;
 const maxScore = 6;
+const gameResult = document.querySelector(".result div");
+const gameEnd = (isVictory) => {
+    setTimeout(() => {
+        gameResult.classList.add("open");
+    }, 200);
+}
+
 const keybordBlock = document.querySelector(".keybord");
 const personParts = document.querySelector(".main__left-partman");
 const wordNone = document.querySelector(".word__none-letters");
@@ -55,16 +63,21 @@ const letterClick = (button, letterClicked) => {
     if(currentAnswer.includes(letterClicked)) {
         [...currentAnswer].forEach((letter, index) => {
             if(letter === letterClicked) {
+                rightLetters.push(letter);
                 wordNone.querySelectorAll("li")[index].innerText = letter;
                 wordNone.querySelectorAll("li")[index].classList.add("word__none-letter");
             }
         });
     } else {
         startScore++;
-    
         personParts.querySelectorAll("div")[startScore-1].classList.add("yes");
     }
+    
+    button.disabled = true;
     scoreNum.innerText = `${startScore} / ${maxScore}`;
+
+    if(startScore === maxScore) return gameEnd(false);
+    if(rightLetters.length === currentAnswer.length) return gameEnd(true);
 }
 
 for(let i = 97; i <= 122; i++) {
