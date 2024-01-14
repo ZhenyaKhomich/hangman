@@ -1,19 +1,3 @@
-
-
-
-const keybordBlock = document.querySelector(".keybord")
-
-for(let i = 97; i <= 122; i++) {
-    const button = document.createElement("button");
-    button.innerText = String.fromCharCode(i);
-    keybordBlock.appendChild(button)
-}
-
-
-
-
-
-
 const listQuestions = [
     {
         question: "What is the first month of summer?",
@@ -55,4 +39,24 @@ const listQuestions = [
         question: "Is the img attribute required?",
         answer:"alt"
     },
-]
+];
+
+const keybordBlock = document.querySelector(".keybord");
+const wordNone = document.querySelector(".word__none-letters");
+for(let i = 97; i <= 122; i++) {
+    const button = document.createElement("button");
+    button.innerText = String.fromCharCode(i);
+    keybordBlock.appendChild(button);
+}
+
+const addRandonQuestion = () => {
+    const {answer, question} = listQuestions[Math.floor(Math.random() * listQuestions.length)];
+    console.log(answer);
+    document.querySelector(".question__text").innerText = question;
+    wordNone.innerHTML = answer.split("").map(() => `<li class="letter"></li>`).join("")
+}
+addRandonQuestion();
+
+
+
+
