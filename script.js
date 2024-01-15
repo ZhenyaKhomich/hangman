@@ -44,14 +44,20 @@ const listQuestions = [
         answer:"bicycle"
     }
 ];
+
 let currentAnswer;
-let rightLetters =[];
-let startScore = 0;
+let rightLetters;
+let startScore;
 const maxScore = 6;
-const gameResult = document.querySelector(".result div");
-const gameEnd = (isVictory) => {
+const gameResultWin = document.querySelector(".win");
+const gameResultLost = document.querySelector(".lost");
+const gameEnd = (isWin) => {
     setTimeout(() => {
-        gameResult.classList.add("open");
+        if (isWin) {
+            gameResultWin.classList.add("open");
+            gameResultWin.querySelector("b").innerHTML = `${currentAnswer}`;
+        }  gameResultLost.classList.add("open");
+        gameResultLost.querySelector("b").innerHTML = `${currentAnswer}`;
     }, 200);
 }
 
@@ -87,15 +93,37 @@ for(let i = 97; i <= 122; i++) {
     button.addEventListener("click", el => letterClick(el.target, String.fromCharCode(i)));
 }
 
+const playAgain = () => {
+    rightLetters = [];
+    startScore = 0;
+    scoreNum.innerText = `${startScore} / ${maxScore}`;
+    document.querySelector(".win").classList.remove("open");
+    gameResultLost.classList.remove("open");
+    keybordBlock.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    wordNone.innerHTML = currentAnswer.split("").map(() => `<li class="letter"></li>`).join("");
+    
+    personParts.querySelectorAll("div")[0].classList.remove("yes");
+    personParts.querySelectorAll("div")[1].classList.remove("yes");
+    personParts.querySelectorAll("div")[2].classList.remove("yes");
+    personParts.querySelectorAll("div")[3].classList.remove("yes");
+    personParts.querySelectorAll("div")[4].classList.remove("yes");
+    personParts.querySelectorAll("div")[5].classList.remove("yes");
+}
+
 const addRandonQuestion = () => {
     const {answer, question} = listQuestions[Math.floor(Math.random() * listQuestions.length)];
     currentAnswer = answer;
     console.log(answer);
     document.querySelector(".question__text").innerText = question;
-    wordNone.innerHTML = answer.split("").map(() => `<li class="letter"></li>`).join("");
+    playAgain ();
+    
 }
+
+const buttonPlayAgainLost = document.querySelector(".lost .play-again");
+const buttonPlayAgainWin = document.querySelector(".win .play-again");
+
 addRandonQuestion();
 
-
-
+buttonPlayAgainLost.addEventListener("click", addRandonQuestion);
+buttonPlayAgainWin.addEventListener("click", addRandonQuestion);
 

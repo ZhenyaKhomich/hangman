@@ -15,7 +15,7 @@
 @media (max-width: 800px) {
     .lost,
     .win {
-        left: 32%;
+        left: 30%;
         top: 38px;
     }
 }
@@ -272,5 +272,12 @@
         width: 35px;
         height: 35px;
         margin: 0px;
+    }
+}
+@media (max-width: 400px) {
+    .lost,
+    .win {
+        left: 15%;
+        top: 25px;
     }
 }

@@ -104,7 +104,6 @@ body {
  border-bottom: solid 5px blue;
  width: 40px;
  margin: 0px 0px 0px 0px;
- 
 }
 .question {
     max-width: 390px ;
@@ -145,7 +144,6 @@ body {
     pointer-events: none;
     background-color: red;
 }
-
 .lost,
 .win {
     display: flex;
@@ -154,6 +152,7 @@ body {
     border: solid 5px rgb(200, 141, 141);
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
     width: 250px;
     height: 300px;
     position: absolute;
@@ -171,13 +170,13 @@ body {
 .win-text {
     color: red;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 35px;
     margin: 0px;
 }
 .word {
     font-size: 30px;
     font-style: italic;
-    margin: 0px;
+    margin: 5px;
 }
 .word b{
     font-size: 30px;
@@ -190,6 +189,11 @@ body {
     border-radius: 30px;
     width: 200px;
     height: 40px;
+    cursor: pointer;
+}
+.play-again:hover {
+    background-color: brown;
+    transition: all 1s;
 }
 .lost, .win {
     display: none;
@@ -197,14 +201,9 @@ body {
 .result .open {
     display: block;
 }
-
-
-
-
-
-
-
-
+.result .lost.ope {
+    display: none;
+}
 .footer {
     display: flex;
     flex-direction: row;
