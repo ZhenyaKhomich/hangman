@@ -145,6 +145,10 @@ body {
     pointer-events: none;
     background-color: red;
 }
+.dis {
+    opacity: 0.6;
+    pointer-events: none;
+}
 .lost,
 .win {
     display: flex;

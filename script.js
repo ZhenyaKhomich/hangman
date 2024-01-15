@@ -56,7 +56,9 @@ const gameEnd = (isWin) => {
         if (isWin) {
             gameResultWin.classList.add("open");
             gameResultWin.querySelector("b").innerHTML = `${currentAnswer}`;
+            document.querySelector(".keybord").classList.add("dis");
         }  gameResultLost.classList.add("open");
+        document.querySelector(".keybord").classList.add("dis");
         gameResultLost.querySelector("b").innerHTML = `${currentAnswer}`;
     }, 200);
 }
@@ -101,13 +103,15 @@ const playAgain = () => {
     gameResultLost.classList.remove("open");
     keybordBlock.querySelectorAll("button").forEach(btn => btn.disabled = false);
     wordNone.innerHTML = currentAnswer.split("").map(() => `<li class="letter"></li>`).join("");
-    
+
     personParts.querySelectorAll("div")[0].classList.remove("yes");
     personParts.querySelectorAll("div")[1].classList.remove("yes");
     personParts.querySelectorAll("div")[2].classList.remove("yes");
     personParts.querySelectorAll("div")[3].classList.remove("yes");
     personParts.querySelectorAll("div")[4].classList.remove("yes");
     personParts.querySelectorAll("div")[5].classList.remove("yes");
+
+    document.querySelector(".keybord").classList.remove("dis");
 }
 
 const addRandonQuestion = () => {
