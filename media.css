@@ -58,7 +58,6 @@
         gap: 10px;
         height: 50px;
     }
-    
     .letter {
      border-bottom: solid 4px blue;
      width: 30px;
@@ -89,6 +88,7 @@
         font-size: 20px;
         width: 30px;
         height: 30px;
+        margin: 0px;
     }
     .footer__year,
     .footer__rs {
@@ -197,6 +197,9 @@
     .img-gallows {
         max-height: 130px;
         padding: 0px 0px 20px 0px;
+    }
+    .header__text {
+        font-size: 30px;
     }
     .main {
         display: flex;
