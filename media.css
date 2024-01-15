@@ -56,7 +56,9 @@
     }
     .word__none-letters {
         gap: 10px;
+        height: 50px;
     }
+    
     .letter {
      border-bottom: solid 4px blue;
      width: 30px;
