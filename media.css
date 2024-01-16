@@ -11,6 +11,43 @@
         left: 35%;
         top: 38px;
     }
+    .question {
+        max-width: 500px;
+    }
+    .keybord {
+        max-width: 500px;
+    }
+    .keybord button {
+        font-size: 32px;
+        width: 45px;
+        height: 45px;
+        margin: 2px;
+    } 
+    .question__text {
+        font-size: 35px;
+    }
+}
+@media (max-width: 875px) {
+    .lost,
+    .win {
+        left: 35%;
+        top: 38px;
+    }
+    .question {
+        max-width: 450px;
+    }
+    .keybord {
+        max-width: 450px;
+    }
+    .keybord button {
+        font-size: 32px;
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+    } 
+    .question__text {
+        font-size: 35px;
+    }
 }
 @media (max-width: 800px) {
     .lost,
@@ -23,31 +60,37 @@
     .page {
         max-width: 768px;
     } 
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .img-gallows {
-        max-height: 250px;
+        max-height: 130px;
+        padding: 0px 0px 20px 0px;
     }
     .main__left-partman {
-       margin: -28px 0px 0px 64px;
-       transform: scale(0.35);
+       margin: -67px 0px 0px 12px;
+       transform: scale(0.15);
     }
     .img1 img {
-        margin: -30px 0px 0px -490px;
+        margin: 0px 0px 0px -300px;
         width: 120px;
     }
     .img2 {
-        margin: -10px 0px 0px -490px;
+        margin: 0px 0px -40px -300px;
     }
     .img3 {
-        margin: -130px 60px 0px -490px;
+        margin: -140px 60px 0px -300px;
     }
     .img4 {
-        margin: -84px -63px 0px -490px;
+        margin: -85px -63px 0px -300px;
     }
     .img5 {
-       margin: 30px 60px 0px -490px;
+       margin: 30px 0px -100px -360px;
     }
     .img6 {
-       margin: -85px -66px 0px -490px;
+       margin: -85px -66px -200px -300px;
     } 
     .word__none {
         display: flex;
@@ -69,7 +112,7 @@
     }
     .question__text {
         font-size: 20px;
-        margin: 20px 0px 10px 0px;
+        margin: 0px 0px 10px 0px;
     }
     .score__text {
         font-size: 20px;
@@ -81,13 +124,13 @@
         justify-content: center;
         gap: 5px;
         flex-wrap: wrap;
-        max-width: 340px;
+        max-width: 440px;
     }
     .keybord button {
         background-color: rgb(217, 221, 80);
-        font-size: 20px;
-        width: 30px;
-        height: 30px;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
         margin: 0px;
     }
     .footer__year,
@@ -105,99 +148,43 @@
         top: 38px;
     }
 }
-
-@media (max-width: 578px) {
-    .page {
-        max-width: 578px;
-    } 
-    .header {
-        font-size: 10px;
+@media (max-width: 600px) {
+   
+    .win,
+    .lost {
+        left: 30%;
+        top: 25px;
     }
-    .img-gallows {
-        max-height: 250px;
-        margin: 10px 0px 0px 0px;
+}
+@media (max-width: 500px) {
+    .header__text {
+        font-size: 33px;
     }
-    .main__left-partman {
-       margin: -18px 0px 0px 64px;
-       transform: scale(0.34);
+    .win,
+    .lost {
+        left: 20%;
+        top: 25px;
     }
-    .img1 img {
-        margin: -30px 0px 0px -490px;
-        width: 120px;
-    }
-    .img2 {
-        margin: -10px 0px 0px -490px;
-    }
-    .img3 {
-        margin: -130px 60px 0px -490px;
-    }
-    .img4 {
-        margin: -84px -63px 0px -490px;
-    }
-    .img5 {
-       margin: 25px 60px 0px -490px;
-    }
-    .img6 {
-       margin: -85px -66px 0px -490px;
-    } 
-    .word__none {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .word__none-letters {
-        gap: 7px;
-    }
-    .letter {
-     border-bottom: solid 3px blue;
-     width: 25px;
-     margin: 30px 0px 10px 0px;
-    }
-    .letter.word__none-letter {
-        font-size: 18px;
-        font-weight: 800;
-    }
+}
+@media (max-width: 440px) {
     .question__text {
-        font-size: 18px;
-        margin: 20px 0px 10px 0px;
-    }
-    .score__text {
-        font-size: 18px;
-        margin: 0px 0px 10px 0px;
+        font-size: 17px;
     }
     .keybord {
-        flex-wrap: wrap;
-        max-width: 290px;
+        max-width: 390px;
     }
     .keybord button {
-        font-size: 18px;
-        width: 25px;
-        height: 25px;
-    }
-    .footer__year,
-    .footer__rs {
-        font-size: 15px;
-    }
-    .footer__github img {
-        width: 35px;
-        height: 35px;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
         margin: 0px;
-    }
-    .lost,
-    .win {
-        left: 24%;
-        top: 30px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 380px) {
     .page {
-        max-width: 500px;
+        max-width: 380px;
     } 
-    .img-gallows {
-        max-height: 130px;
-        padding: 0px 0px 20px 0px;
-    }
     .header__text {
         font-size: 30px;
     }
@@ -206,12 +193,16 @@
         flex-direction: column;
         align-items: center;
     }
+    .img-gallows {
+        max-height: 130px;
+        padding: 0px 0px 60px 0px;
+    }
     .main__left-partman {
        margin: -67px 0px 0px 12px;
        transform: scale(0.15);
     }
     .img1 img {
-        margin: 0px 0px 0px -300px;
+        margin: -75px 0px 0px -300px;
         width: 120px;
     }
     .img2 {
@@ -257,12 +248,13 @@
         margin: 0px 0px 10px 0px;
     }
     .keybord {
-        max-width: 240px;
+        max-width: 320px;
     }
     .keybord button {
-        font-size: 12px;
-        width: 20px;
-        height: 20px;
+        font-size: 25px;
+        width: 36px;
+        height: 36px;
+        margin: 0px;
     }
     .win,
     .lost {
