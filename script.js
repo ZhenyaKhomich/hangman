@@ -45,6 +45,220 @@ const listQuestions = [
     }
 ];
 
+const page = document.createElement("div");
+page.className = "page";
+document.body.prepend(page);
+
+const header = document.createElement("header");
+header.className = "header";
+page.append(header); 
+
+const h1 = document.createElement("h1");
+h1.className = "header__text";
+header.append(h1);
+h1.innerHTML = ("- HANGMAN GAME -");
+
+const main = document.createElement("div");
+main.className = "main";
+page.append(main);
+
+const main__left = document.createElement("div");
+main__left.className = "main__left";
+main.append(main__left);
+
+const main__leftGallows = document.createElement("div");
+main__leftGallows .className = "main__left-gallows";
+main__left.append(main__leftGallows);
+
+const img__gallows = document.createElement("img");
+img__gallows.className = "img-gallows";
+img__gallows.src="./assets/gallows.png";
+main__leftGallows.append(img__gallows);
+
+const main__leftPartMan = document.createElement("div");
+main__leftPartMan.className = "main__left-partman";
+main__left.append(main__leftPartMan);
+
+const img1 = document.createElement("div");
+img1.className = "img1 no";
+main__leftPartMan.append(img1);
+
+const part1 = document.createElement("img");
+part1.className = "part1";
+part1.src = "./assets/part-1.png";
+img1.append(part1);
+
+const img2 = document.createElement("div");
+img2.className = "img2 no";
+main__leftPartMan.append(img2);
+
+const part2 = document.createElement("img");
+part2.className = "part2";
+part2.src = "./assets/part-2.png";
+img2.append(part2);
+
+const img3 = document.createElement("div");
+img3.className = "img3 no";
+main__leftPartMan.append(img3);
+
+const part3 = document.createElement("img");
+part3.className = "part3";
+part3.src = "./assets/part-3.png";
+img3.append(part3);
+
+const img4 = document.createElement("div");
+img4.className = "img4 no";
+main__leftPartMan.append(img4);
+
+const part4 = document.createElement("img");
+part4.className = "part4";
+part4.src = "./assets/part-4.png";
+img4.append(part4);
+
+const img5 = document.createElement("div");
+img5.className = "img5 no";
+main__leftPartMan.append(img5);
+
+const part5 = document.createElement("img");
+part5.className = "part5";
+part5.src = "./assets/part-5.png"
+img5.append(part5);
+
+const img6 = document.createElement("div");
+img6.className = "img6 no";
+main__leftPartMan.append(img6);
+
+const part6 = document.createElement("img");
+part6.className = "part6";
+part6.src = "./assets/part-6.png";
+img6.append(part6);
+
+const result = document.createElement("div");
+result.className = "result";
+main.append(result);
+
+const lost = document.createElement("div");
+lost.className = "lost";
+result.append(lost);
+
+const lostImg = document.createElement("img");
+lostImg.className = "lostImg";
+lostImg.src ="./assets/lose-img.png";
+lost.append(lostImg);
+
+const lost__text = document.createElement("p");
+lost__text.className = "lost-text";
+lost.append(lost__text);
+lost__text.innerHTML = ('GAME OVER');
+
+const word = document.createElement("p");
+word.className = "word";
+lost.append(word);
+
+const wordBLost = document.createElement("b");
+wordBLost.className = "wordBLost";
+word.append(wordBLost);
+
+const playAgLost = document.createElement("button");
+playAgLost.className = "play-again";
+playAgLost.innerHTML = ("PLAY AGAIN");
+lost.append(playAgLost);
+
+const win = document.createElement("div");
+win.className = "win";
+result.append(win);
+
+const winImg = document.createElement("img");
+winImg.className = "winImg";
+winImg.src ="./assets/win-img.png";
+win.append(winImg);
+
+const win__text = document.createElement("p");
+win__text.className = "win-text";
+win__text.innerHTML = ("YOU WIN");
+win.append(win__text);
+
+const wordWin = document.createElement("b");
+wordWin.className = "word";
+win.append(wordWin);
+
+const wordBWin = document.createElement("b");
+wordBWin.className = "wordBWin";
+word.append(wordBWin);
+
+const playAgWin = document.createElement("button");
+playAgWin.className = "play-again";
+playAgWin.innerHTML = ("PLAY AGAIN");
+win.append(playAgWin);
+
+const main__right = document.createElement("div");
+main__right.className = "main__right";
+main.append(main__right);
+
+const word__none = document.createElement("div");
+word__none.className = "word__none";
+main__right.append(word__none);
+
+const word__none__letters = document.createElement("ul");
+word__none__letters.className = "word__none-letters";
+word__none.append(word__none__letters);
+
+const question = document.createElement("div");
+question.className = "question";
+main__right.append(question);
+
+const question__text = document.createElement("p");
+question__text.className = "question__text";
+question.append(question__text);
+
+const score__block = document.createElement("div");
+score__block.className = "score__block";
+main__right.append(score__block);
+
+const score__text = document.createElement("p");
+score__text.className = "score__text";
+score__block.append(score__text);
+
+const score__num = document.createElement("span");
+score__num.className = "score-num";
+score__text.append(score__num);
+
+const elB = document.createElement("b");
+elB.className = "elB";
+score__num.append(elB);
+
+const keybord = document.createElement("div");
+keybord.className = "keybord";
+main__right.append(keybord);
+
+const footer = document.createElement("div");
+footer.className = "footer";
+page.append(footer);
+
+const footer__year = document.createElement("div");
+footer__year.className = "footer__year";
+footer__year.innerHTML = ('@2024');
+footer.append(footer__year);
+
+const footer__rs = document.createElement("div");
+footer__rs.className = "footer__rs";
+footer__rs.innerHTML = ("The Rolling Scopes School");
+footer.append(footer__rs);
+
+const footer__github = document.createElement("div");
+footer__github.className = "footer__github";
+footer.append(footer__github);
+
+const footer__githubA = document.createElement("a");
+footer__githubA.className = "footer__githubA";
+footer__githubA.href = "https://github.com/ZhenyaKhomich";
+footer__github.append(footer__githubA);
+
+const footer__img = document.createElement("img");
+footer__img.className = "footer__img";
+footer__img.src = "./assets/git.png";
+footer__githubA.append(footer__img);
+
 let currentAnswer;
 let rightLetters;
 let startScore;
@@ -66,7 +280,7 @@ const gameEnd = (isWin) => {
 const keybordBlock = document.querySelector(".keybord");
 const personParts = document.querySelector(".main__left-partman");
 const wordNone = document.querySelector(".word__none-letters");
-const scoreNum = document.querySelector(".score-num");
+const scoreNum = document.querySelector(".score-num b");
 const letterClick = (button, letterClicked) => {
     if(currentAnswer.includes(letterClicked)) {
         [...currentAnswer].forEach((letter, index) => {

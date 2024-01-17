@@ -73,7 +73,7 @@ body {
 .main__left-partman svg {
     fell: rgb(224, 190, 197);
 }
-.no {
+.no {                             
     display: none;
 }
 .yes {
@@ -223,9 +223,10 @@ body {
 }
 .footer__year,
 .footer__rs {
+    font-weight: 800;
     font-size: 20px;
 }
-.footer__github img {
+.footer__github a img {
     width: 40px;
     height: 40px;
     margin: 0px;
