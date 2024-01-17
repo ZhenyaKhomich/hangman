@@ -308,6 +308,9 @@ for(let i = 97; i <= 122; i++) {
     keybordBlock.appendChild(button);
     button.addEventListener("click", el => letterClick(el.target, String.fromCharCode(i)));
 }
+document.addEventListener('keyup', (e) => {
+    letterClick(e.key, e.key);
+  });
 
 const playAgain = () => {
     rightLetters = [];
@@ -327,6 +330,8 @@ const playAgain = () => {
 
     document.querySelector(".keybord").classList.remove("dis");
 }
+
+
 
 const addRandonQuestion = () => {
     const {answer, question} = listQuestions[Math.floor(Math.random() * listQuestions.length)];
